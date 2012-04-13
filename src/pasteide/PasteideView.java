@@ -166,10 +166,12 @@ public class PasteideView extends FrameView {
 
         jScrollPane2.setName("jScrollPane2"); // NOI18N
 
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(pasteide.PasteideApp.class).getContext().getResourceMap(PasteideView.class);
+        ideoneOutput.setBackground(resourceMap.getColor("ideoneOutput.background")); // NOI18N
         ideoneOutput.setColumns(20);
         ideoneOutput.setRows(5);
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(pasteide.PasteideApp.class).getContext().getResourceMap(PasteideView.class);
         ideoneOutput.setText(resourceMap.getString("ideoneOutput.text")); // NOI18N
+        ideoneOutput.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("ideoneOutput.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, resourceMap.getFont("ideoneOutput.border.titleFont"), resourceMap.getColor("ideoneOutput.border.titleColor"))); // NOI18N
         ideoneOutput.setName("ideoneOutput"); // NOI18N
         jScrollPane2.setViewportView(ideoneOutput);
 
@@ -191,6 +193,7 @@ public class PasteideView extends FrameView {
         });
 
         pastebinURI.setText(resourceMap.getString("pastebinURI.text")); // NOI18N
+        pastebinURI.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("pastebinURI.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, resourceMap.getFont("pastebinURI.border.titleFont"), resourceMap.getColor("pastebinURI.border.titleColor"))); // NOI18N
         pastebinURI.setName("pastebinURI"); // NOI18N
 
         getSource.setText(resourceMap.getString("getSource.text")); // NOI18N
@@ -213,8 +216,9 @@ public class PasteideView extends FrameView {
         selectLang.setName("selectLang"); // NOI18N
 
         newPasteURI.setText(resourceMap.getString("newPasteURI.text")); // NOI18N
+        newPasteURI.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("newPasteURI.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, resourceMap.getFont("newPasteURI.border.titleFont"), resourceMap.getColor("newPasteURI.border.titleColor"))); // NOI18N
         newPasteURI.setName("newPasteURI"); // NOI18N
-        newPasteURI.setVisible(false);
+        newPasteURI.setVisible(true);
 
         codeEditor.setName("codeEditor"); // NOI18N
 
@@ -236,10 +240,12 @@ public class PasteideView extends FrameView {
         ideInputParams.setColumns(20);
         ideInputParams.setRows(5);
         ideInputParams.setText(resourceMap.getString("ideInputParams.text")); // NOI18N
+        ideInputParams.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("ideInputParams.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, resourceMap.getFont("ideInputParams.border.titleFont"), resourceMap.getColor("ideInputParams.border.titleColor"))); // NOI18N
         ideInputParams.setName("ideInputParams"); // NOI18N
         jScrollPane3.setViewportView(ideInputParams);
 
         ideLink.setText(resourceMap.getString("ideLink.text")); // NOI18N
+        ideLink.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("ideLink.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, resourceMap.getFont("ideLink.border.titleFont"), resourceMap.getColor("ideLink.border.titleColor"))); // NOI18N
         ideLink.setName("ideLink"); // NOI18N
 
         jScrollPane4.setName("jScrollPane4"); // NOI18N
@@ -247,6 +253,7 @@ public class PasteideView extends FrameView {
         ideErr.setColumns(20);
         ideErr.setRows(5);
         ideErr.setText(resourceMap.getString("ideErr.text")); // NOI18N
+        ideErr.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("ideErr.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, resourceMap.getFont("ideErr.border.titleFont"), resourceMap.getColor("ideErr.border.titleColor"))); // NOI18N
         ideErr.setName("ideErr"); // NOI18N
         jScrollPane4.setViewportView(ideErr);
 
@@ -336,7 +343,7 @@ public class PasteideView extends FrameView {
                     .addGroup(mainLayout.createSequentialGroup()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ideStatus)
@@ -344,8 +351,8 @@ public class PasteideView extends FrameView {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ideLink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(8, 8, 8)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
-                    .addComponent(codeEditor, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE))
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))
+                    .addComponent(codeEditor, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
